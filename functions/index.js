@@ -6,9 +6,7 @@ const axios = require("axios");
 admin.initializeApp();
 
 const db = admin.firestore();
-const SPOONACULAR_API_KEY = "fbbde4668a8849148fadd3ba8dd69449";
-//const SPOONACULAR_API_KEY = "fbbde4668a8849148fadd3ba8dd69449"; // REPLICA
-//const SPOONACULAR_API_KEY = "563ec2ac4d8a474f87c6f1a2c3cc8f83";
+const SPOONACULAR_API_KEY = process.env.SPOONACULAR_API_KEY;
 
 const getData = async (id) => {
   try {
